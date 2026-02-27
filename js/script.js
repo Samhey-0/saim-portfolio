@@ -193,7 +193,7 @@ function initTypingEffect() {
     const professions = [
         'Full Stack Developer',
         'Web Designer',
-        'UI/UX Enthusiast',
+        'AI Enthusiast',
         'Problem Solver',
         'Tech Blogger'
     ];

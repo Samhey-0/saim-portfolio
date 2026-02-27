@@ -1,0 +1,91 @@
+/* ========================================
+   GitHub Projects — Add these to style.css
+======================================== */
+
+/* Repo Stats Row */
+.repo-stats {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 16px;
+    padding: 10px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+}
+
+.repo-stat {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.repo-stat i {
+    font-size: 0.75rem;
+    color: var(--accent-primary);
+}
+
+/* Language tag accent */
+.lang-tag {
+    background: var(--accent-secondary) !important;
+    color: white !important;
+    font-weight: 600;
+}
+
+[data-theme="dark"] .lang-tag {
+    background: var(--accent-primary) !important;
+}
+
+/* Skeleton Loading Cards */
+.skeleton-card {
+    pointer-events: none;
+}
+
+.skeleton-image {
+    width: 100%;
+    aspect-ratio: 16/10;
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--border-color) 50%, var(--bg-tertiary) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+.skeleton-line {
+    height: 14px;
+    border-radius: 7px;
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--border-color) 50%, var(--bg-tertiary) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    margin-bottom: 10px;
+}
+
+.skeleton-title {
+    height: 20px;
+    width: 70%;
+    margin-bottom: 14px;
+}
+
+.skeleton-line.short {
+    width: 50%;
+}
+
+.skeleton-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.skeleton-tag {
+    height: 28px;
+    width: 70px;
+    border-radius: 20px;
+    background: linear-gradient(90deg, var(--bg-tertiary) 25%, var(--border-color) 50%, var(--bg-tertiary) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}

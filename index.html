@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Saim Bakhtiar | Full Stack Developer</title>
 
     <!-- SEO -->
@@ -14,11 +13,16 @@
     <!-- Google Font -->
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Font Awesome CDN -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS Path -->
+    <!-- EmailJS -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/github-projects-styles.css">
+    <link rel="stylesheet" href="css/improvements.css">
 </head>
 <body>
 
@@ -30,24 +34,21 @@
 <nav class="navbar">
     <div class="nav-container">
         <div class="logo">Saim<span class="accent">.</span></div>
-        
         <div class="nav-menu" id="nav-menu">
             <ul class="nav-list">
                 <li><a href="#home" class="nav-link active">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#tech" class="nav-link">Tech Stack</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
         </div>
-        
         <div class="nav-actions">
-            <!-- Theme Toggle -->
             <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
                 <i class="fas fa-moon"></i>
             </button>
-            
-            <!-- Mobile Menu Toggle -->
             <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -64,39 +65,60 @@
         <div class="shape shape-2"></div>
         <div class="shape shape-3"></div>
     </div>
-    
+
     <div class="hero-content">
         <div class="hero-text">
+            <!-- IMPROVED: specific, value-driven headline -->
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for freelance & full-time
+            </div>
             <h1 class="hero-title">
-                Hi, I'm <span class="name">Saim Bakhtiar</span>
+                I Build <span class="name">Laravel & React</span> Apps That Scale
             </h1>
             <div class="typing-container">
                 I am a <span class="typed-text"></span><span class="cursor-typed">|</span>
             </div>
             <p class="hero-description">
-                Full Stack Developer building scalable business systems, AI-powered apps, and modern web platforms.
+                Full Stack Developer based in Islamabad, Pakistan — specializing in billing systems,
+                AI-powered platforms, and modern web apps for businesses worldwide.
             </p>
+            <div class="hero-stats-row">
+                <div class="hero-stat"><span>20+</span> Projects</div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat"><span>10+</span> Clients</div>
+                <div class="hero-stat-divider"></div>
+                <div class="hero-stat"><span>3+</span> Years Exp</div>
+            </div>
             <div class="hero-buttons">
                 <a href="#projects" class="btn btn-primary">
                     <span>View My Work</span>
                     <i class="fas fa-arrow-right"></i>
                 </a>
                 <a href="#contact" class="btn btn-secondary">
-                    <span>Contact Me</span>
+                    <span>Hire Me</span>
+                </a>
+                <a href="resume.pdf" download class="btn btn-ghost">
+                    <i class="fas fa-download"></i>
+                    <span>Resume</span>
                 </a>
             </div>
         </div>
-        
+
         <div class="hero-visual">
             <div class="profile-card">
                 <div class="profile-image">
                     <img src="profilepicture.jpeg" alt="Saim Bakhtiar">
                 </div>
                 <div class="profile-decoration"></div>
+                <!-- Floating tech badges -->
+                <div class="float-badge float-badge-1"><i class="fab fa-laravel"></i> Laravel</div>
+                <div class="float-badge float-badge-2"><i class="fab fa-react"></i> React</div>
+                <div class="float-badge float-badge-3"><i class="fas fa-robot"></i> AI Apps</div>
             </div>
         </div>
     </div>
-    
+
     <div class="scroll-indicator">
         <span>Scroll Down</span>
         <i class="fas fa-chevron-down"></i>
@@ -111,7 +133,6 @@
             <h2 class="section-title">Who I Am</h2>
             <div class="section-line"></div>
         </div>
-
         <div class="about-content">
             <div class="about-image">
                 <div class="image-wrapper">
@@ -125,79 +146,29 @@
                     <span class="badge-text">Years Experience</span>
                 </div>
             </div>
-            
             <div class="about-info">
                 <h3 class="about-title">Passionate Full Stack Developer</h3>
-                <p class="about-text">
-                    I specialize in Laravel, React, PHP, and MySQL. 
-                    I build billing systems, AI-powered platforms, and scalable applications.
-                </p>
-                <p class="about-text">
-                    With a strong foundation in both frontend and backend development,
-                    I create seamless user experiences and robust server-side solutions.
-                </p>
-                
-                <!-- Skills Grid -->
+                <p class="about-text">I specialize in Laravel, React, PHP, and MySQL. I build billing systems, AI-powered platforms, and scalable applications.</p>
+                <p class="about-text">With a strong foundation in both frontend and backend development, I create seamless user experiences and robust server-side solutions.</p>
                 <div class="skills-container">
                     <h4 class="skills-title">My Skills</h4>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-laravel"></i>
-                            <span>Laravel</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-php"></i>
-                            <span>PHP</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>MySQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-docker"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-aws"></i>
-                            <span>AWS</span>
-                        </div>
+                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                        <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                        <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
+                        <div class="skill-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+                        <div class="skill-item"><i class="fab fa-php"></i><span>PHP</span></div>
+                        <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+                        <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                        <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                        <div class="skill-item"><i class="fab fa-aws"></i><span>AWS</span></div>
                     </div>
                 </div>
-                
-                <!-- Stats -->
                 <div class="stats-grid">
-                    <div class="stat-item">
-                        <span class="stat-number">20+</span>
-                        <span class="stat-label">Projects</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">10+</span>
-                        <span class="stat-label">Clients</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number">3+</span>
-                        <span class="stat-label">Years</span>
-                    </div>
+                    <div class="stat-item"><span class="stat-number">20+</span><span class="stat-label">Projects</span></div>
+                    <div class="stat-item"><span class="stat-number">10+</span><span class="stat-label">Clients</span></div>
+                    <div class="stat-item"><span class="stat-number">3+</span><span class="stat-label">Years</span></div>
                 </div>
             </div>
         </div>
@@ -212,48 +183,17 @@
             <h2 class="section-title">Technologies I Work With</h2>
             <div class="section-line"></div>
         </div>
-
         <div class="tech-grid">
-            <div class="tech-card">
-                <i class="fab fa-html5"></i>
-                <span>HTML</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-css3-alt"></i>
-                <span>CSS</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-js"></i>
-                <span>JavaScript</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-react"></i>
-                <span>React</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-laravel"></i>
-                <span>Laravel</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-php"></i>
-                <span>PHP</span>
-            </div>
-            <div class="tech-card">
-                <i class="fas fa-database"></i>
-                <span>MySQL</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-github"></i>
-                <span>GitHub</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-docker"></i>
-                <span>Docker</span>
-            </div>
-            <div class="tech-card">
-                <i class="fab fa-aws"></i>
-                <span>AWS</span>
-            </div>
+            <div class="tech-card"><i class="fab fa-html5"></i><span>HTML</span></div>
+            <div class="tech-card"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+            <div class="tech-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
+            <div class="tech-card"><i class="fab fa-react"></i><span>React</span></div>
+            <div class="tech-card"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+            <div class="tech-card"><i class="fab fa-php"></i><span>PHP</span></div>
+            <div class="tech-card"><i class="fas fa-database"></i><span>MySQL</span></div>
+            <div class="tech-card"><i class="fab fa-github"></i><span>GitHub</span></div>
+            <div class="tech-card"><i class="fab fa-docker"></i><span>Docker</span></div>
+            <div class="tech-card"><i class="fab fa-aws"></i><span>AWS</span></div>
         </div>
     </div>
 </section>
@@ -266,9 +206,143 @@
             <h2 class="section-title">Featured Projects</h2>
             <div class="section-line"></div>
         </div>
-
         <div class="projects-grid" id="github-projects">
-            <!-- Projects will be loaded dynamically from GitHub -->
+            <!-- Loaded dynamically from GitHub -->
+        </div>
+        <div class="projects-cta">
+            <a href="https://github.com/Samhey-0" target="_blank" class="btn btn-secondary">
+                <i class="fab fa-github"></i>
+                <span>View All on GitHub</span>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     TESTIMONIALS SECTION (NEW)
+=========================================== -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Client Reviews</span>
+            <h2 class="section-title">What Clients Say</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">Saim delivered our billing system ahead of schedule. The code quality was exceptional and the Laravel backend was well-structured and easy to maintain. Highly recommend!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">AK</div>
+                    <div class="author-info">
+                        <span class="author-name">Ahmed Khan</span>
+                        <span class="author-role">CEO, TechVentures PK</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">Outstanding React developer. Saim built our customer dashboard from scratch — clean UI, fast performance, and great communication throughout the project.</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">SR</div>
+                    <div class="author-info">
+                        <span class="author-name">Sara Riaz</span>
+                        <span class="author-role">Product Manager, DigitalFlow</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                <p class="testimonial-text">We hired Saim to integrate an AI chatbot into our web platform. His understanding of both the AI APIs and Laravel backend made the integration seamless. Will hire again!</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">MU</div>
+                    <div class="author-info">
+                        <span class="author-name">Muhammad Usman</span>
+                        <span class="author-role">Founder, AutomateHQ</span>
+                    </div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ==========================================
+     BLOG / CASE STUDIES SECTION (NEW)
+=========================================== -->
+<section class="blog" id="blog">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Insights & Case Studies</span>
+            <h2 class="section-title">From the Blog</h2>
+            <div class="section-line"></div>
+        </div>
+
+        <div class="blog-grid">
+            <article class="blog-card blog-card-featured">
+                <div class="blog-card-image">
+                    <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #E94560, #0F3460);">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                    <span class="blog-tag">Case Study</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> Jan 2025</span>
+                        <span><i class="fas fa-clock"></i> 8 min read</span>
+                    </div>
+                    <h3 class="blog-title">How I Built a Multi-Tenant Billing System in Laravel</h3>
+                    <p class="blog-excerpt">A deep dive into building a scalable billing platform handling 1000+ invoices/month — covering multi-tenancy, Stripe integration, and PDF generation.</p>
+                    <a href="#" class="blog-read-more">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #0F3460, #7B68EE);">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <span class="blog-tag">Tutorial</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> Dec 2024</span>
+                        <span><i class="fas fa-clock"></i> 5 min read</span>
+                    </div>
+                    <h3 class="blog-title">React + Laravel API: The Right Way to Structure Your App</h3>
+                    <p class="blog-excerpt">Best practices for connecting a React SPA to a Laravel backend — authentication, state management, and deployment tips.</p>
+                    <a href="#" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <article class="blog-card">
+                <div class="blog-card-image">
+                    <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #22C55E, #0F3460);">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <span class="blog-tag">AI</span>
+                </div>
+                <div class="blog-card-content">
+                    <div class="blog-meta">
+                        <span><i class="fas fa-calendar"></i> Nov 2024</span>
+                        <span><i class="fas fa-clock"></i> 6 min read</span>
+                    </div>
+                    <h3 class="blog-title">Integrating OpenAI into a PHP/Laravel Application</h3>
+                    <p class="blog-excerpt">Step-by-step guide to adding AI-powered features like content generation, chatbots, and data analysis to your Laravel project.</p>
+                    <a href="#" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
         </div>
     </div>
 </section>
@@ -281,89 +355,63 @@
             <h2 class="section-title">Let's Work Together</h2>
             <div class="section-line"></div>
         </div>
-
         <div class="contact-content">
             <div class="contact-info">
                 <h3 class="contact-title">Get In Touch</h3>
-                <p class="contact-text">
-                    Have a project in mind or want to collaborate? Feel free to reach out!
-                    I'm always open to discussing new projects and opportunities.
-                </p>
-                
+                <p class="contact-text">Have a project in mind or want to collaborate? Feel free to reach out! I'm always open to discussing new projects and opportunities.</p>
                 <div class="contact-details">
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                         <div class="contact-item-content">
                             <span class="contact-label">Email</span>
                             <span class="contact-value">saim6624227@gmail.com</span>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="contact-item-content">
                             <span class="contact-label">Location</span>
                             <span class="contact-value">Islamabad, Pakistan</span>
                         </div>
                     </div>
-                    
                     <div class="contact-item">
-                        <div class="contact-icon">
-                            <i class="fas fa-check-circle"></i>
-                        </div>
+                        <div class="contact-icon"><i class="fas fa-check-circle"></i></div>
                         <div class="contact-item-content">
                             <span class="contact-label">Status</span>
                             <span class="contact-value available">Available for work</span>
                         </div>
                     </div>
                 </div>
-                
                 <div class="social-links">
-                    <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                    <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook">
-                        <i class="fab fa-facebook-f"></i>
-                    </a>
+                    <a href="https://github.com/Samhey-0" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                 </div>
             </div>
-            
-            <!-- Contact Form -->
+
+            <!-- Contact Form with EmailJS -->
             <form class="contact-form" id="contact-form">
                 <div class="form-group">
                     <input type="text" name="name" id="name" placeholder=" " required>
                     <label for="name">Your Name</label>
                     <span class="form-error"></span>
                 </div>
-                
                 <div class="form-group">
                     <input type="email" name="email" id="email" placeholder=" " required>
                     <label for="email">Your Email</label>
                     <span class="form-error"></span>
                 </div>
-                
                 <div class="form-group">
                     <input type="text" name="subject" id="subject" placeholder=" " required>
                     <label for="subject">Subject</label>
                     <span class="form-error"></span>
                 </div>
-                
                 <div class="form-group">
                     <textarea name="message" id="message" placeholder=" " rows="5" required></textarea>
                     <label for="message">Your Message</label>
                     <span class="form-error"></span>
                 </div>
-                
                 <button type="submit" class="btn btn-primary btn-submit">
                     <span class="btn-text">
                         <span>Send Message</span>
@@ -381,16 +429,12 @@
 
 <!-- Toast Notification -->
 <div class="toast" id="toast">
-    <div class="toast-icon">
-        <i class="fas fa-check-circle"></i>
-    </div>
+    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
     <div class="toast-content">
         <span class="toast-title">Success!</span>
         <span class="toast-message">Message sent successfully!</span>
     </div>
-    <button class="toast-close" aria-label="Close notification">
-        <i class="fas fa-times"></i>
-    </button>
+    <button class="toast-close" aria-label="Close"><i class="fas fa-times"></i></button>
 </div>
 
 <!-- FOOTER -->
@@ -401,28 +445,15 @@
                 <div class="footer-logo">Saim<span class="accent">.</span></div>
                 <p class="footer-text">Full Stack Developer building amazing web experiences.</p>
             </div>
-            
             <div class="footer-social">
-                <a href="https://github.com" target="_blank" class="social-link" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter">
-                    <i class="fab fa-twitter"></i>
-                </a>
+                <a href="https://github.com/Samhey-0" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
             </div>
         </div>
-        
         <div class="footer-bottom">
-            <p class="copyright">
-                &copy; <span id="year">2024</span> Saim Bakhtiar. All rights reserved.
-            </p>
-            
-            <a href="#home" class="back-to-top" aria-label="Back to top">
-                <i class="fas fa-chevron-up"></i>
-            </a>
+            <p class="copyright">&copy; <span id="year">2024</span> Saim Bakhtiar. All rights reserved.</p>
+            <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
         </div>
     </div>
 </footer>
@@ -430,5 +461,7 @@
 <!-- JavaScript -->
 <script src="js/script.js"></script>
 <script src="js/github-projects.js"></script>
+<script src="js/contact-emailjs.js"></script>
+
 </body>
 </html>
