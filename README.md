@@ -2,7 +2,7 @@
 
 A modern, responsive portfolio website for a full-stack web developer. Built with HTML, CSS, and JavaScript, featuring a dark/light mode toggle, smooth animations, and a professional design.
 
-![Portfolio Preview](MAin.png)
+![Portfolio Preview](screenshots)
 
 ## Features
 
