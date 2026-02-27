@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbarScroll();
     initContactForm();
     initYear();
+    initGitHubProjects();
 });
 
 /**
