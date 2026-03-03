@@ -451,14 +451,18 @@ function initContactForm() {
         const title = toast.querySelector('.toast-title');
         const msg = toast.querySelector('.toast-message');
         
+        toast.classList.remove('success', 'error');
+        
         if (type === 'success') {
             icon?.classList.remove('fa-times-circle');
             icon?.classList.add('fa-check-circle');
             title.textContent = 'Success!';
+            toast.classList.add('success');
         } else {
             icon?.classList.remove('fa-check-circle');
             icon?.classList.add('fa-times-circle');
             title.textContent = 'Error!';
+            toast.classList.add('error');
         }
         
         msg.textContent = message;
