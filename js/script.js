@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initContactForm();
     initYear();
     initGitHubProjects();
+    initFaqChatbot();
 });
 
 /**
