@@ -14,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbarScroll();
     initContactForm();
     initYear();
-    initGitHubProjects();
     initFaqChatbot();
 });
 
@@ -236,16 +235,34 @@ function initTypingEffect() {
 
 /**
  * Scroll Animations
- * Uses Intersection Observer for fade-in animations
+ * Uses Intersection Observer for fade-in animations with optional staggered delays
  */
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.project-card, .skill-item, .stat-item, .contact-item, .section-header'
+        '.project-card, .skill-item, .stat-item, .contact-item, .section-header, .tech-card, .about-info, .about-image'
     );
     
-    // Add initial class
-    animatedElements.forEach(el => {
-        el.classList.add('fade-in');
+    // Add initial class with smart directions based on element type
+    animatedElements.forEach((el, index) => {
+        if (el.classList.contains('about-image')) {
+            el.classList.add('slide-right');
+        } else if (el.classList.contains('about-info')) {
+            el.classList.add('slide-left');
+        } else if (el.classList.contains('tech-card') || el.classList.contains('skill-item')) {
+            el.classList.add('scale-in');
+        } else {
+            el.classList.add('fade-in');
+        }
+        
+        // Setup staggered delays for grids
+        const parent = el.parentElement;
+        if (parent && (parent.classList.contains('skills-grid') || parent.classList.contains('tech-grid') || parent.classList.contains('projects-grid') || parent.classList.contains('stats-grid'))) {
+            // Find index of element relative to siblings
+            const siblings = Array.from(parent.children);
+            const indexInParent = siblings.indexOf(el);
+            // Convert to ms delay (e.g. 100ms per index)
+            el.style.transitionDelay = `${indexInParent * 100}ms`;
+        }
     });
     
     // Create observer
@@ -253,6 +270,8 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
+                // Optional: Stop observing once animated in
+                // observer.unobserve(entry.target); 
             }
         });
     }, {

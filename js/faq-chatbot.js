@@ -72,7 +72,7 @@ function createChatUI() {
         container.className = 'chatbot-container';
         container.innerHTML = `
             <div class="chatbot-header">
-                <div class="chatbot-title">FAQ Assistant</div>
+                <div class="chatbot-title">AI Assistant</div>
                 <button class="chatbot-close" aria-label="Close chatbot">
                     <i class="fas fa-times"></i>
                 </button>
@@ -80,8 +80,14 @@ function createChatUI() {
             <div class="chatbot-messages" id="chatbot-messages">
                 <div class="chat-message bot">
                     <div class="message-bubble">
-                        Hi Saim's FAQ Assistant! 👋<br><br><strong>Quick Answers:</strong><br>1️⃣ Tech stack<br>2️⃣ Hiring/rates<br>3️⃣ Experience<br>4️⃣ Projects<br>5️⃣ Location<br><br>Type number (1-5) or keywords!
+                        Hello! 👋 I'm Saim's AI Assistant. How can I help you today?
                     </div>
+                </div>
+                <div class="quick-replies">
+                    <button class="quick-reply-chip" onclick="document.getElementById('chatbot-input').value='Tech stack'; document.getElementById('chatbot-send').click();">🛠️ Tech Stack</button>
+                    <button class="quick-reply-chip" onclick="document.getElementById('chatbot-input').value='Hire you'; document.getElementById('chatbot-send').click();">💼 Hire You</button>
+                    <button class="quick-reply-chip" onclick="document.getElementById('chatbot-input').value='Experience'; document.getElementById('chatbot-send').click();">⭐ Experience</button>
+                    <button class="quick-reply-chip" onclick="document.getElementById('chatbot-input').value='Location'; document.getElementById('chatbot-send').click();">📍 Location</button>
                 </div>
             </div>
             <div class="chatbot-input-container">

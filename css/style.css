@@ -49,13 +49,42 @@ html {
 }
 
 body {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-primary);
     background-color: var(--bg-primary);
     overflow-x: hidden;
     transition: background-color var(--transition-normal), color var(--transition-normal);
+}
+
+/* ========================================
+   Glassmorphism Utilities
+======================================== */
+.glassmorphism {
+    background: rgba(255, 255, 255, 0.4) !important;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.05) !important;
+}
+
+[data-theme="dark"] .glassmorphism {
+    background: rgba(26, 26, 46, 0.4) !important;
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3) !important;
+}
+
+.glassmorphism-nav {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+[data-theme="dark"] .glassmorphism-nav {
+    background: rgba(15, 15, 26, 0.7) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 a {
@@ -1359,4 +1388,55 @@ input, textarea {
         grid-template-columns: 1fr;
         gap: 20px;
     }
+}
+
+/* ========================================
+   Scroll Animations
+======================================== */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.slide-right {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+}
+
+.slide-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.slide-left {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+}
+
+.slide-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+    will-change: opacity, transform;
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
 }

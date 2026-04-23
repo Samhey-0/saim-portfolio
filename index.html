@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en" data-theme="light">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Saim Bakhtiar | Full Stack Developer</title>
 
     <!-- SEO -->
-    <meta name="description" content="Saim Bakhtiar - Full Stack Developer from Islamabad specializing in Laravel, React, and AI-powered web apps.">
-    <meta name="keywords" content="Full Stack Developer Islamabad, Laravel Developer Pakistan, React Developer, PHP Developer">
+    <meta name="description"
+        content="Saim Bakhtiar - Full Stack Developer from Islamabad specializing in Laravel, React, and AI-powered web apps.">
+    <meta name="keywords"
+        content="Full Stack Developer Islamabad, Laravel Developer Pakistan, React Developer, PHP Developer">
     <meta name="author" content="Saim Bakhtiar">
 
     <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -21,453 +25,557 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/github-projects-styles.css">
     <link rel="stylesheet" href="css/improvements.css">
     <link rel="stylesheet" href="css/chatbot.css">
 
 </head>
+
 <body>
 
-<!-- Custom Cursor -->
-<div class="cursor"></div>
-<div class="cursor-follower"></div>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
 
-<!-- NAVBAR -->
-<nav class="navbar">
-    <div class="nav-container">
-        <div class="logo">Saim<span class="accent">.</span></div>
-        <div class="nav-menu" id="nav-menu">
-            <ul class="nav-list">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#tech" class="nav-link">Tech Stack</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#testimonials" class="nav-link">Reviews</a></li>
-                <li><a href="#blog" class="nav-link">Blog</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-        </div>
-        <div class="nav-actions">
-            <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
-                <i class="fas fa-moon"></i>
-            </button>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
-        </div>
-    </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" id="home">
-    <div class="hero-bg">
-        <div class="shape shape-1"></div>
-        <div class="shape shape-2"></div>
-        <div class="shape shape-3"></div>
-    </div>
-
-    <div class="hero-content">
-        <div class="hero-text">
-            <!-- IMPROVED: specific, value-driven headline -->
-            <div class="hero-badge">
-                <span class="badge-dot"></span>
-                Available for freelance & full-time
+    <!-- NAVBAR -->
+    <nav class="navbar glassmorphism-nav">
+        <div class="nav-container">
+            <div class="logo">Saim<span class="accent">.</span></div>
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#tech" class="nav-link">Tech Stack</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
             </div>
-            <h1 class="hero-title">
-                I Build <span class="name">Laravel & React</span> Apps That Scale
-            </h1>
-            <div class="typing-container">
-                I am a <span class="typed-text"></span><span class="cursor-typed">|</span>
-            </div>
-            <p class="hero-description">
-                Full Stack Developer based in Islamabad, Pakistan — specializing in billing systems,
-                AI-powered platforms, and modern web apps for businesses worldwide.
-            </p>
-            <div class="hero-stats-row">
-                <div class="hero-stat"><span>20+</span> Projects</div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat"><span>10+</span> Clients</div>
-                <div class="hero-stat-divider"></div>
-                <div class="hero-stat"><span>1+</span> Years Exp</div>
-            </div>
-            <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">
-                    <span>View My Work</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="#contact" class="btn btn-secondary">
-                    <span>Hire Me</span>
-                </a>
-                <a href="resume.pdf" download class="btn btn-ghost">
-                    <i class="fas fa-download"></i>
-                    <span>Resume</span>
-                </a>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Toggle menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
             </div>
         </div>
+    </nav>
 
-        <div class="hero-visual">
-            <div class="profile-card">
-                <div class="profile-image">
-                    <img src="profilepicture.jpeg" alt="Saim Bakhtiar">
+    <!-- HERO -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+
+        <div class="hero-content">
+            <div class="hero-text">
+                <!-- IMPROVED: specific, value-driven headline -->
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for freelance & full-time
                 </div>
-                <div class="profile-decoration"></div>
-                <!-- Floating tech badges -->
-                <div class="float-badge float-badge-1"><i class="fab fa-laravel"></i> Laravel</div>
-                <div class="float-badge float-badge-2"><i class="fab fa-react"></i> React</div>
-                <div class="float-badge float-badge-3"><i class="fas fa-robot"></i> AI Apps</div>
+                <h1 class="hero-title">
+                    I Build <span class="name">Laravel & React</span> Apps That Scale
+                </h1>
+                <div class="typing-container">
+                    I am a <span class="typed-text"></span><span class="cursor-typed">|</span>
+                </div>
+                <p class="hero-description">
+                    Full Stack Developer based in Islamabad, Pakistan — specializing in billing systems,
+                    AI-powered platforms, and modern web apps for businesses worldwide.
+                </p>
+                <div class="hero-stats-row">
+                    <div class="hero-stat"><span>20+</span> Projects</div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat"><span>10+</span> Clients</div>
+                    <div class="hero-stat-divider"></div>
+                    <div class="hero-stat"><span>1+</span> Years Exp</div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary">
+                        <span>Hire Me</span>
+                    </a>
+                    <a href="resume.pdf" download class="btn btn-ghost">
+                        <i class="fas fa-download"></i>
+                        <span>Resume</span>
+                    </a>
+                </div>
             </div>
-        </div>
-    </div>
 
-    <div class="scroll-indicator">
-        <span>Scroll Down</span>
-        <i class="fas fa-chevron-down"></i>
-    </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about" id="about">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle">About Me</span>
-            <h2 class="section-title">Who I Am</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="about-content">
-            <div class="about-image">
-                <div class="image-wrapper">
-                    <div style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary)); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
-                        <i class="fas fa-code" style="font-size: 100px; color: white; opacity: 0.5;"></i>
+            <div class="hero-visual">
+                <div class="profile-card glassmorphism">
+                    <div class="profile-image">
+                        <img src="profilepicture.jpeg" alt="Saim Bakhtiar">
                     </div>
-                    <div class="image-overlay"></div>
-                </div>
-                <div class="experience-badge">
-                    <span class="badge-number">1+</span>
-                    <span class="badge-text">Years Experience</span>
+                    <div class="profile-decoration"></div>
+                    <!-- Floating tech badges -->
+                    <div class="float-badge float-badge-1"><i class="fab fa-laravel"></i> Laravel</div>
+                    <div class="float-badge float-badge-2"><i class="fab fa-react"></i> React</div>
+                    <div class="float-badge float-badge-3"><i class="fas fa-robot"></i> AI Apps</div>
                 </div>
             </div>
-            <div class="about-info">
-                <h3 class="about-title">Passionate Full Stack Developer</h3>
-                <p class="about-text">I specialize in Laravel, React, PHP, and MySQL. I build billing systems, AI-powered platforms, and scalable applications.</p>
-                <p class="about-text">With a strong foundation in both frontend and backend development, I create seamless user experiences and robust server-side solutions.</p>
-                <div class="skills-container">
-                    <h4 class="skills-title">My Skills</h4>
-                    <div class="skills-grid">
-                        <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
-                        <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
-                        <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
-                        <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
-                        <div class="skill-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
-                        <div class="skill-item"><i class="fab fa-php"></i><span>PHP</span></div>
-                        <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
-                        <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
-                        <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
-                        <div class="skill-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+        </div>
+
+        <div class="scroll-indicator">
+            <span>Scroll Down</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">About Me</span>
+                <h2 class="section-title">Who I Am</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <div
+                            style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary)); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-code" style="font-size: 100px; color: white; opacity: 0.5;"></i>
+                        </div>
+                        <div class="image-overlay"></div>
+                    </div>
+                    <div class="experience-badge">
+                        <span class="badge-number">1+</span>
+                        <span class="badge-text">Years Experience</span>
                     </div>
                 </div>
-                <div class="stats-grid">
-                    <div class="stat-item"><span class="stat-number">20+</span><span class="stat-label">Projects</span></div>
-                    <div class="stat-item"><span class="stat-number">10+</span><span class="stat-label">Clients</span></div>
-                    <div class="stat-item"><span class="stat-number">3+</span><span class="stat-label">Years</span></div>
+                <div class="about-info">
+                    <h3 class="about-title">Passionate Full Stack Developer</h3>
+                    <p class="about-text">I specialize in Laravel, React, PHP, and MySQL. I build billing systems,
+                        AI-powered platforms, and scalable applications.</p>
+                    <p class="about-text">With a strong foundation in both frontend and backend development, I create
+                        seamless user experiences and robust server-side solutions.</p>
+                    <div class="skills-container">
+                        <h4 class="skills-title">My Skills</h4>
+                        <div class="skills-grid">
+                            <div class="skill-item"><i class="fab fa-html5"></i><span>HTML5</span></div>
+                            <div class="skill-item"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+                            <div class="skill-item"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                            <div class="skill-item"><i class="fab fa-react"></i><span>React</span></div>
+                            <div class="skill-item"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+                            <div class="skill-item"><i class="fab fa-php"></i><span>PHP</span></div>
+                            <div class="skill-item"><i class="fas fa-database"></i><span>MySQL</span></div>
+                            <div class="skill-item"><i class="fab fa-git-alt"></i><span>Git</span></div>
+                            <div class="skill-item"><i class="fab fa-docker"></i><span>Docker</span></div>
+                            <div class="skill-item"><i class="fab fa-aws"></i><span>AWS</span></div>
+                        </div>
+                    </div>
+                    <div class="stats-grid">
+                        <div class="stat-item"><span class="stat-number">20+</span><span
+                                class="stat-label">Projects</span></div>
+                        <div class="stat-item"><span class="stat-number">10+</span><span
+                                class="stat-label">Clients</span></div>
+                        <div class="stat-item"><span class="stat-number">3+</span><span class="stat-label">Years</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
-<!-- TECH STACK -->
-<section class="tech-stack" id="tech">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle">Tech Stack</span>
-            <h2 class="section-title">Technologies I Work With</h2>
-            <div class="section-line"></div>
+    <!-- TECH STACK -->
+    <section class="tech-stack" id="tech">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Tech Stack</span>
+                <h2 class="section-title">Technologies I Work With</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card glassmorphism"><i class="fab fa-html5"></i><span>HTML</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-js"></i><span>JavaScript</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-react"></i><span>React</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-laravel"></i><span>Laravel</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-php"></i><span>PHP</span></div>
+                <div class="tech-card glassmorphism"><i class="fas fa-database"></i><span>MySQL</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-github"></i><span>GitHub</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-docker"></i><span>Docker</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-aws"></i><span>AWS</span></div>
+                <div class="tech-card glassmorphism"><i class="fas fa-code"></i><span>RestAPI</span></div>
+                <div class="tech-card glassmorphism"><i class="fab fa-git-alt"></i><span>Git</span></div>
+            </div>
         </div>
-        <div class="tech-grid">
-            <div class="tech-card"><i class="fab fa-html5"></i><span>HTML</span></div>
-            <div class="tech-card"><i class="fab fa-css3-alt"></i><span>CSS</span></div>
-            <div class="tech-card"><i class="fab fa-js"></i><span>JavaScript</span></div>
-            <div class="tech-card"><i class="fab fa-react"></i><span>React</span></div>
-            <div class="tech-card"><i class="fab fa-laravel"></i><span>Laravel</span></div>
-            <div class="tech-card"><i class="fab fa-php"></i><span>PHP</span></div>
-            <div class="tech-card"><i class="fas fa-database"></i><span>MySQL</span></div>
-            <div class="tech-card"><i class="fab fa-github"></i><span>GitHub</span></div>
-            <div class="tech-card"><i class="fab fa-docker"></i><span>Docker</span></div>
-            <div class="tech-card"><i class="fab fa-aws"></i><span>AWS</span></div>
-            <div class="tech-card"><i class="fab fa-react"></i><span>RestAPI</span></div>
-            <div class="tech-card"><i class="fab fa-github"></i><span>Git</span></div>
-        </div>
-    </div>
-</section>
+    </section>
 
-<!-- PROJECTS -->
-<section class="projects" id="projects">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle">My Work</span>
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="projects-grid" id="github-projects">
-            <!-- Loaded dynamically from GitHub -->
-        </div>
-        <div class="projects-cta">
-            <a href="https://github.com/Samhey-0" target="_blank" class="btn btn-secondary">
-                <i class="fab fa-github"></i>
-                <span>View All on GitHub</span>
-            </a>
-        </div>
-    </div>
-</section>
+    <!-- PROJECTS -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">My Work</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glassmorphism scale-in">
+                    <div class="project-image">
+                        <img src="Projects/Marketplace.png" alt="Multi-Vendor Marketplace">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Multi-Vendor Marketplace</h3>
+                        <p class="about-text" style="font-size: 0.95rem; margin-bottom: 0;">A fully functional e-commerce platform allowing multiple vendors to manage stores, process orders, and track sales.</p>
+                    </div>
+                </div>
+                
+                <!-- Project 2 -->
+                <div class="project-card glassmorphism scale-in">
+                    <div class="project-image">
+                        <img src="Projects/Billing system.png" alt="Automated Billing System">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Automated Billing System</h3>
+                        <p class="about-text" style="font-size: 0.95rem; margin-bottom: 0;">A robust SaaS invoice and billing management platform with multi-tenant architecture for enterprise clients.</p>
+                    </div>
+                </div>
+                
+                <!-- Project 3 -->
+                <div class="project-card glassmorphism scale-in">
+                    <div class="project-image">
+                        <img src="Projects/AI Powered poultry disease Detection.png" alt="AI Poultry Disease Detection">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Poultry Disease Detection</h3>
+                        <p class="about-text" style="font-size: 0.95rem; margin-bottom: 0;">An intelligent computer vision system to detect diseases in poultry with high accuracy using deep learning algorithms.</p>
+                    </div>
+                </div>
 
-<!-- ==========================================
+                <!-- Project 4 -->
+                <div class="project-card glassmorphism scale-in">
+                    <div class="project-image">
+                        <img src="Projects/Ai chatbot.png" alt="AI Chatbot Assistant">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI Chatbot Assistant</h3>
+                        <p class="about-text" style="font-size: 0.95rem; margin-bottom: 0;">A context-aware intelligent virtual assistant capable of handling complex customer queries and automating support.</p>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card glassmorphism scale-in">
+                    <div class="project-image">
+                        <img src="Projects/LIve Weather WebApp.png" alt="Live Weather WebApp">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Live Weather WebApp</h3>
+                        <p class="about-text" style="font-size: 0.95rem; margin-bottom: 0;">Real-time weather tracking application utilizing external REST APIs with dynamic forecasting displays.</p>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card glassmorphism scale-in">
+                    <div class="project-image">
+                        <img src="Projects/make it for coffee shop.png" alt="Coffee Shop POS">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i><span>View Project</span></a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Coffee Shop POS & Ordering</h3>
+                        <p class="about-text" style="font-size: 0.95rem; margin-bottom: 0;">A sleek point-of-sale and online ordering system designed specifically for modern digital-first coffee shops.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==========================================
      TESTIMONIALS SECTION (NEW)
 =========================================== -->
-<section class="testimonials" id="testimonials">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle">Client Reviews</span>
-            <h2 class="section-title">What Clients Say</h2>
-            <div class="section-line"></div>
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Client Reviews</span>
+                <h2 class="section-title">What Clients Say</h2>
+                <div class="section-line"></div>
+            </div>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">Saim delivered our billing system ahead of schedule. The code quality
+                        was exceptional and the Laravel backend was well-structured and easy to maintain. Highly
+                        recommend!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AK</div>
+                        <div class="author-info">
+                            <span class="author-name">Ahmed Khan</span>
+                            <span class="author-role">CEO, TechVentures PK</span>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">Outstanding React developer. Saim built our customer dashboard from
+                        scratch — clean UI, fast performance, and great communication throughout the project.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SR</div>
+                        <div class="author-info">
+                            <span class="author-name">Sara Riaz</span>
+                            <span class="author-role">Product Manager, DigitalFlow</span>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <p class="testimonial-text">We hired Saim to integrate an AI chatbot into our web platform. His
+                        understanding of both the AI APIs and Laravel backend made the integration seamless. Will hire
+                        again!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MU</div>
+                        <div class="author-info">
+                            <span class="author-name">Muhammad Usman</span>
+                            <span class="author-role">Founder, AutomateHQ</span>
+                        </div>
+                        <div class="testimonial-stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                <p class="testimonial-text">Saim delivered our billing system ahead of schedule. The code quality was exceptional and the Laravel backend was well-structured and easy to maintain. Highly recommend!</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">AK</div>
-                    <div class="author-info">
-                        <span class="author-name">Ahmed Khan</span>
-                        <span class="author-role">CEO, TechVentures PK</span>
-                    </div>
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                <p class="testimonial-text">Outstanding React developer. Saim built our customer dashboard from scratch — clean UI, fast performance, and great communication throughout the project.</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">SR</div>
-                    <div class="author-info">
-                        <span class="author-name">Sara Riaz</span>
-                        <span class="author-role">Product Manager, DigitalFlow</span>
-                    </div>
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                    </div>
-                </div>
-            </div>
-
-            <div class="testimonial-card">
-                <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
-                <p class="testimonial-text">We hired Saim to integrate an AI chatbot into our web platform. His understanding of both the AI APIs and Laravel backend made the integration seamless. Will hire again!</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">MU</div>
-                    <div class="author-info">
-                        <span class="author-name">Muhammad Usman</span>
-                        <span class="author-role">Founder, AutomateHQ</span>
-                    </div>
-                    <div class="testimonial-stars">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- ==========================================
+    <!-- ==========================================
      BLOG / CASE STUDIES SECTION (NEW)
 =========================================== -->
-<section class="blog" id="blog">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle">Insights & Case Studies</span>
-            <h2 class="section-title">From the Blog</h2>
-            <div class="section-line"></div>
-        </div>
-
-        <div class="blog-grid">
-            <article class="blog-card blog-card-featured">
-                <div class="blog-card-image">
-                    <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #E94560, #0F3460);">
-                        <i class="fas fa-file-invoice-dollar"></i>
-                    </div>
-                    <span class="blog-tag">Case Study</span>
-                </div>
-                <div class="blog-card-content">
-                    <div class="blog-meta">
-                        <span><i class="fas fa-calendar"></i> Jan 2025</span>
-                        <span><i class="fas fa-clock"></i> 8 min read</span>
-                    </div>
-                    <h3 class="blog-title">How I Built a Multi-Tenant Billing System in Laravel</h3>
-                    <p class="blog-excerpt">A deep dive into building a scalable billing platform handling 1000+ invoices/month — covering multi-tenancy, Stripe integration, and PDF generation.</p>
-                    <a href="#" class="blog-read-more">Read Case Study <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <article class="blog-card">
-                <div class="blog-card-image">
-                    <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #0F3460, #7B68EE);">
-                        <i class="fab fa-react"></i>
-                    </div>
-                    <span class="blog-tag">Tutorial</span>
-                </div>
-                <div class="blog-card-content">
-                    <div class="blog-meta">
-                        <span><i class="fas fa-calendar"></i> Dec 2024</span>
-                        <span><i class="fas fa-clock"></i> 5 min read</span>
-                    </div>
-                    <h3 class="blog-title">React + Laravel API: The Right Way to Structure Your App</h3>
-                    <p class="blog-excerpt">Best practices for connecting a React SPA to a Laravel backend — authentication, state management, and deployment tips.</p>
-                    <a href="#" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-
-            <article class="blog-card">
-                <div class="blog-card-image">
-                    <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #22C55E, #0F3460);">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <span class="blog-tag">AI</span>
-                </div>
-                <div class="blog-card-content">
-                    <div class="blog-meta">
-                        <span><i class="fas fa-calendar"></i> Nov 2024</span>
-                        <span><i class="fas fa-clock"></i> 6 min read</span>
-                    </div>
-                    <h3 class="blog-title">Integrating OpenAI into a PHP/Laravel Application</h3>
-                    <p class="blog-excerpt">Step-by-step guide to adding AI-powered features like content generation, chatbots, and data analysis to your Laravel project.</p>
-                    <a href="#" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </article>
-        </div>
-    </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact" id="contact">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-subtitle">Contact</span>
-            <h2 class="section-title">Let's Work Together</h2>
-            <div class="section-line"></div>
-        </div>
-        <div class="contact-content">
-            <div class="contact-info">
-                <h3 class="contact-title">Get In Touch</h3>
-                <p class="contact-text">Have a project in mind or want to collaborate? Feel free to reach out! I'm always open to discussing new projects and opportunities.</p>
-                <div class="contact-details">
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
-                        <div class="contact-item-content">
-                            <span class="contact-label">Email</span>
-                            <span class="contact-value">saim6624227@gmail.com</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
-                        <div class="contact-item-content">
-                            <span class="contact-label">Location</span>
-                            <span class="contact-value">Islamabad, Pakistan</span>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon"><i class="fas fa-check-circle"></i></div>
-                        <div class="contact-item-content">
-                            <span class="contact-label">Status</span>
-                            <span class="contact-value available">Available for work</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="social-links">
-                    <a href="https://github.com/Samhey-0" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                    <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                </div>
+    <section class="blog" id="blog">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Insights & Case Studies</span>
+                <h2 class="section-title">From the Blog</h2>
+                <div class="section-line"></div>
             </div>
 
-            <!-- Contact Form with EmailJS -->
-            <form class="contact-form" id="contact-form">
-                <div class="form-group">
-                    <input type="text" name="name" id="name" placeholder=" " required>
-                    <label for="name">Your Name</label>
-                    <span class="form-error"></span>
-                </div>
-                <div class="form-group">
-                    <input type="email" name="email" id="email" placeholder=" " required>
-                    <label for="email">Your Email</label>
-                    <span class="form-error"></span>
-                </div>
-                <div class="form-group">
-                    <input type="text" name="subject" id="subject" placeholder=" " required>
-                    <label for="subject">Subject</label>
-                    <span class="form-error"></span>
-                </div>
-                <div class="form-group">
-                    <textarea name="message" id="message" placeholder=" " rows="5" required></textarea>
-                    <label for="message">Your Message</label>
-                    <span class="form-error"></span>
-                </div>
-                <button type="submit" class="btn btn-primary btn-submit">
-                    <span class="btn-text">
-                        <span>Send Message</span>
-                        <i class="fas fa-paper-plane"></i>
-                    </span>
-                    <span class="btn-loading">
-                        <i class="fas fa-spinner fa-spin"></i>
-                        <span>Sending...</span>
-                    </span>
-                </button>
-            </form>
-        </div>
-    </div>
-</section>
+            <div class="blog-grid">
+                <article class="blog-card blog-card-featured">
+                    <div class="blog-card-image">
+                        <div class="blog-image-placeholder"
+                            style="background: linear-gradient(135deg, #E94560, #0F3460);">
+                            <i class="fas fa-file-invoice-dollar"></i>
+                        </div>
+                        <span class="blog-tag">Case Study</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Jan 2025</span>
+                            <span><i class="fas fa-clock"></i> 8 min read</span>
+                        </div>
+                        <h3 class="blog-title">How I Built a Multi-Tenant Billing System in Laravel</h3>
+                        <p class="blog-excerpt">A deep dive into building a scalable billing platform handling 1000+
+                            invoices/month — covering multi-tenancy, Stripe integration, and PDF generation.</p>
+                        <a href="#" class="blog-read-more">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
-<!-- Toast Notification -->
-<div class="toast" id="toast">
-    <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
-    <div class="toast-content">
-        <span class="toast-title">Success!</span>
-        <span class="toast-message">Message sent successfully!</span>
-    </div>
-    <button class="toast-close" aria-label="Close"><i class="fas fa-times"></i></button>
-</div>
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-image-placeholder"
+                            style="background: linear-gradient(135deg, #0F3460, #7B68EE);">
+                            <i class="fab fa-react"></i>
+                        </div>
+                        <span class="blog-tag">Tutorial</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Dec 2024</span>
+                            <span><i class="fas fa-clock"></i> 5 min read</span>
+                        </div>
+                        <h3 class="blog-title">React + Laravel API: The Right Way to Structure Your App</h3>
+                        <p class="blog-excerpt">Best practices for connecting a React SPA to a Laravel backend —
+                            authentication, state management, and deployment tips.</p>
+                        <a href="#" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
 
-<!-- FOOTER -->
-<footer class="footer">
-    <div class="container">
-        <div class="footer-content">
-            <div>
-                <div class="footer-logo">Saim<span class="accent">.</span></div>
-                <p class="footer-text">Full Stack Developer building amazing web experiences.</p>
+                <article class="blog-card">
+                    <div class="blog-card-image">
+                        <div class="blog-image-placeholder"
+                            style="background: linear-gradient(135deg, #22C55E, #0F3460);">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="blog-tag">AI</span>
+                    </div>
+                    <div class="blog-card-content">
+                        <div class="blog-meta">
+                            <span><i class="fas fa-calendar"></i> Nov 2024</span>
+                            <span><i class="fas fa-clock"></i> 6 min read</span>
+                        </div>
+                        <h3 class="blog-title">Integrating OpenAI into a PHP/Laravel Application</h3>
+                        <p class="blog-excerpt">Step-by-step guide to adding AI-powered features like content
+                            generation, chatbots, and data analysis to your Laravel project.</p>
+                        <a href="#" class="blog-read-more">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
             </div>
-            <div class="footer-social">
-                <a href="https://github.com/Samhey-0" target="_blank" class="social-link" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-subtitle">Contact</span>
+                <h2 class="section-title">Let's Work Together</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-title">Get In Touch</h3>
+                    <p class="contact-text">Have a project in mind or want to collaborate? Feel free to reach out! I'm
+                        always open to discussing new projects and opportunities.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="contact-item-content">
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">saim6624227@gmail.com</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="contact-item-content">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Islamabad, Pakistan</span>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon"><i class="fas fa-check-circle"></i></div>
+                            <div class="contact-item-content">
+                                <span class="contact-label">Status</span>
+                                <span class="contact-value available">Available for work</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/Samhey-0" target="_blank" class="social-link" aria-label="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/saim-bakhtiar-9786b8222/" target="_blank"
+                            class="social-link" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://facebook.com" target="_blank" class="social-link" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+
+                <!-- Contact Form with EmailJS -->
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <input type="text" name="name" id="name" placeholder=" " required>
+                        <label for="name">Your Name</label>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" id="email" placeholder=" " required>
+                        <label for="email">Your Email</label>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="subject" id="subject" placeholder=" " required>
+                        <label for="subject">Subject</label>
+                        <span class="form-error"></span>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="message" placeholder=" " rows="5" required></textarea>
+                        <label for="message">Your Message</label>
+                        <span class="form-error"></span>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-submit">
+                        <span class="btn-text">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </span>
+                        <span class="btn-loading">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <span>Sending...</span>
+                        </span>
+                    </button>
+                </form>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p class="copyright">&copy; <span id="year">2025</span> Saim Bakhtiar. All rights reserved.</p>
-            <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
-        </div>
-    </div>
-</footer>
+    </section>
 
-<!-- JavaScript -->
-<script src="js/script.js"></script>
-<script src="js/github-projects.js"></script>
+    <!-- Toast Notification -->
+    <div class="toast" id="toast">
+        <div class="toast-icon"><i class="fas fa-check-circle"></i></div>
+        <div class="toast-content">
+            <span class="toast-title">Success!</span>
+            <span class="toast-message">Message sent successfully!</span>
+        </div>
+        <button class="toast-close" aria-label="Close"><i class="fas fa-times"></i></button>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div>
+                    <div class="footer-logo">Saim<span class="accent">.</span></div>
+                    <p class="footer-text">Full Stack Developer building amazing web experiences.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Samhey-0" target="_blank" class="social-link" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank" class="social-link" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank" class="social-link" aria-label="Twitter"><i
+                            class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="year">2025</span> Saim Bakhtiar. All rights reserved.</p>
+                <a href="#home" class="back-to-top" aria-label="Back to top"><i class="fas fa-chevron-up"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
     <script src="js/contact-emailjs.js"></script>
     <script src="js/faq-chatbot.js"></script>
 
 
 </body>
+
 </html>
