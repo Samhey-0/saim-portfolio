@@ -141,12 +141,12 @@
             </div>
             <div class="about-content">
                 <div class="about-image">
-                    <div class="image-wrapper">
-                        <div
-                            style="width: 100%; height: 400px; background: linear-gradient(135deg, var(--accent-secondary), var(--accent-primary)); border-radius: 20px; display: flex; align-items: center; justify-content: center;">
-                            <i class="fas fa-code" style="font-size: 100px; color: white; opacity: 0.5;"></i>
-                        </div>
-                        <div class="image-overlay"></div>
+                    <div class="image-wrapper scroll-3d-container">
+                        <video id="about-model-video" class="about-video" muted playsinline preload="auto">
+                            <source src="model/Model.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay"></div>
                     </div>
                     <div class="experience-badge">
                         <span class="badge-number">1+</span>
@@ -154,11 +154,9 @@
                     </div>
                 </div>
                 <div class="about-info">
-                    <h3 class="about-title">Passionate Full Stack Developer</h3>
-                    <p class="about-text">I specialize in Laravel, React, PHP, and MySQL. I build billing systems,
-                        AI-powered platforms, and scalable applications.</p>
-                    <p class="about-text">With a strong foundation in both frontend and backend development, I create
-                        seamless user experiences and robust server-side solutions.</p>
+                    <h3 class="about-title">Crafting Digital Excellence with Code & Creativity</h3>
+                    <p class="about-text">I am a results-driven Full Stack Developer based in Islamabad, dedicated to building high-performance web applications that solve real-world problems. My expertise lies in the <strong>Laravel</strong> ecosystem and <strong>React</strong> frontend development.</p>
+                    <p class="about-text">From architecting complex multi-tenant billing systems to developing cutting-edge AI-powered platforms, I focus on scalability, security, and exceptional user experience. I don't just write code; I build digital solutions that empower businesses to grow.</p>
                     <div class="skills-container">
                         <h4 class="skills-title">My Skills</h4>
                         <div class="skills-grid">
@@ -304,6 +302,13 @@
                         <p class="about-text" style="font-size: 0.95rem; margin-bottom: 0;">A sleek point-of-sale and online ordering system designed specifically for modern digital-first coffee shops.</p>
                     </div>
                 </div>
+            </div>
+
+            <div class="projects-cta scale-in">
+                <a href="https://github.com/Samhey-0" target="_blank" class="btn btn-github">
+                    <span>View All Projects on GitHub</span>
+                    <i class="fab fa-github"></i>
+                </a>
             </div>
         </div>
     </section>

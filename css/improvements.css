@@ -126,6 +126,50 @@
 .projects-cta {
     text-align: center;
     margin-top: 50px;
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+.btn-github {
+    background: #24292e;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px 36px;
+    font-size: 1rem;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-github::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+    z-index: -1;
+}
+
+.btn-github:hover::before {
+    left: 100%;
+}
+
+.btn-github:hover {
+    background: #2f363d;
+    color: white;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.btn-github i {
+    font-size: 1.2rem;
+    transition: transform 0.3s ease;
+}
+
+.btn-github:hover i {
+    transform: rotate(360deg);
 }
 
 /* ── Project card gradient thumbnails ────── */
@@ -139,6 +183,49 @@
     gap: 12px;
     position: relative;
     overflow: hidden;
+}
+
+/* ── About Section 3D Video ────────────────── */
+.about-content {
+    grid-template-columns: 1.2fr 1fr;
+    align-items: center;
+}
+
+.scroll-3d-container {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.about-video {
+    width: 100%;
+    height: 520px;
+    display: block;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 30px;
+    box-shadow: 0 30px 80px var(--shadow-color);
+    transition: transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+    background: transparent;
+}
+
+.video-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, var(--accent-secondary), transparent 70%);
+    opacity: 0.15;
+    pointer-events: none;
+    border-radius: 30px;
+}
+
+.experience-badge {
+    bottom: 30px !important;
+    right: 30px !important;
+    padding: 18px 28px !important;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2) !important;
+    backdrop-filter: blur(10px);
+    z-index: 5;
 }
 
 .project-thumb::before {
@@ -167,6 +254,8 @@
     position: relative;
     z-index: 1;
 }
+
+/* ── Project card gradient thumbnails ────── */
 
 /* ── Testimonials Section ─────────────────── */
 .testimonials {
@@ -430,6 +519,52 @@
     }
 
     .float-badge { display: none; }
+
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-image {
+        padding: 0 10px;
+        margin-bottom: 20px;
+    }
+
+    .about-video {
+        height: auto;
+        max-height: 450px;
+        object-fit: contain;
+    }
+
+    .about-title {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+
+    .about-text {
+        text-align: center;
+        font-size: 1rem;
+    }
+
+    .experience-badge {
+        bottom: 15px !important;
+        right: 15px !important;
+        padding: 12px 20px !important;
+        background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary)) !important;
+    }
+
+    .experience-badge .badge-number {
+        font-size: 1.5rem;
+    }
+
+    .experience-badge .badge-text {
+        font-size: 0.65rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -440,5 +575,15 @@
     .btn-ghost {
         width: 100%;
         justify-content: center;
+    }
+
+    .about-video {
+        height: auto;
+        max-height: 400px;
+        object-fit: contain;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

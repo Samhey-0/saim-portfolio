@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initNavbarScroll();
     initContactForm();
     initYear();
-    initFaqChatbot();
+    if (typeof initFaqChatbot === 'function') initFaqChatbot();
+    initScrollVideo();
 });
 
 /**
@@ -270,8 +271,6 @@ function initScrollAnimations() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('visible');
-                // Optional: Stop observing once animated in
-                // observer.unobserve(entry.target); 
             }
         });
     }, {
@@ -331,7 +330,6 @@ function initNavbarScroll() {
 /**
  * Contact Form Handler
  * Validates and handles form submission
- * Note: EmailJS integration ready - configure below
  */
 function initContactForm() {
     const form = document.getElementById('contact-form');
@@ -340,45 +338,17 @@ function initContactForm() {
     
     if (!form) return;
     
-    // EmailJS Configuration
-    // Replace these with your EmailJS credentials
-    const EMAILJS_CONFIG = {
-        publicKey: 'YOUR_PUBLIC_KEY',
-        serviceId: 'YOUR_SERVICE_ID',
-        templateId: 'YOUR_TEMPLATE_ID'
-    };
-    
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
-        // Validate form
-        if (!validateForm(form)) {
-            return;
-        }
+        if (!validateForm(form)) return;
         
-        // Show loading state
         submitBtn?.classList.add('loading');
         
         try {
-            // Option 1: Use EmailJS (uncomment and configure)
-            /*
-            const response = await emailjs.sendForm(
-                EMAILJS_CONFIG.serviceId,
-                EMAILJS_CONFIG.templateId,
-                form,
-                EMAILJS_CONFIG.publicKey
-            );
-            */
-            
-            // Option 2: Simulate form submission (for demo)
             await simulateFormSubmission();
-            
-            // Show success toast
             showToast('success', 'Message sent successfully!');
-            
-            // Reset form
             form.reset();
-            
         } catch (error) {
             console.error('Form submission error:', error);
             showToast('error', 'Failed to send message. Please try again.');
@@ -387,31 +357,20 @@ function initContactForm() {
         }
     });
     
-    // Real-time validation
     const inputs = form.querySelectorAll('input, textarea');
-    
     inputs.forEach(input => {
-        input.addEventListener('blur', () => {
-            validateField(input);
-        });
-        
+        input.addEventListener('blur', () => validateField(input));
         input.addEventListener('input', () => {
-            // Clear error on input
             const formGroup = input.closest('.form-group');
             formGroup?.classList.remove('error');
         });
     });
     
     function validateForm(form) {
-        const inputs = form.querySelectorAll('input, textarea');
         let isValid = true;
-        
         inputs.forEach(input => {
-            if (!validateField(input)) {
-                isValid = false;
-            }
+            if (!validateField(input)) isValid = false;
         });
-        
         return isValid;
     }
     
@@ -421,58 +380,39 @@ function initContactForm() {
         let isValid = true;
         let errorMessage = '';
         
-        // Check required
         if (input.hasAttribute('required') && !input.value.trim()) {
             isValid = false;
             errorMessage = 'This field is required';
-        }
-        
-        // Check email format
-        if (input.type === 'email' && input.value) {
+        } else if (input.type === 'email' && input.value) {
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(input.value)) {
                 isValid = false;
                 errorMessage = 'Please enter a valid email address';
             }
-        }
-        
-        // Check minimum length for message
-        if (input.name === 'message' && input.value.length < 10) {
+        } else if (input.name === 'message' && input.value.length < 10) {
             isValid = false;
             errorMessage = 'Message must be at least 10 characters';
         }
         
-        // Update UI
         if (formGroup) {
-            if (isValid) {
-                formGroup.classList.remove('error');
-            } else {
-                formGroup.classList.add('error');
-            }
+            if (isValid) formGroup.classList.remove('error');
+            else formGroup.classList.add('error');
         }
-        
-        if (errorSpan) {
-            errorSpan.textContent = errorMessage;
-        }
-        
+        if (errorSpan) errorSpan.textContent = errorMessage;
         return isValid;
     }
     
     function simulateFormSubmission() {
-        return new Promise((resolve) => {
-            setTimeout(resolve, 1500);
-        });
+        return new Promise((resolve) => setTimeout(resolve, 1500));
     }
     
     function showToast(type, message) {
         if (!toast) return;
-        
         const icon = toast.querySelector('.toast-icon i');
         const title = toast.querySelector('.toast-title');
         const msg = toast.querySelector('.toast-message');
         
         toast.classList.remove('success', 'error');
-        
         if (type === 'success') {
             icon?.classList.remove('fa-times-circle');
             icon?.classList.add('fa-check-circle');
@@ -484,54 +424,47 @@ function initContactForm() {
             title.textContent = 'Error!';
             toast.classList.add('error');
         }
-        
         msg.textContent = message;
-        
-        // Show toast
         toast.classList.add('show');
-        
-        // Auto hide after 5 seconds
-        setTimeout(() => {
-            toast.classList.remove('show');
-        }, 5000);
+        setTimeout(() => toast.classList.remove('show'), 5000);
     }
     
-    // Close toast on button click
     const toastClose = toast?.querySelector('.toast-close');
-    toastClose?.addEventListener('click', () => {
-        toast.classList.remove('show');
-    });
+    toastClose?.addEventListener('click', () => toast.classList.remove('show'));
 }
 
 /**
  * Update Year
- * Automatically updates the copyright year
  */
 function initYear() {
     const yearElement = document.getElementById('year');
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
+    if (yearElement) yearElement.textContent = new Date().getFullYear();
 }
 
 /**
- * Optional: Google Analytics (uncomment to enable)
+ * Scroll-Controlled Video
+ * Plays video only when scrolling and adds dynamic 3D rotation
  */
-// window.addEventListener('load', () => {
-//     // Add your Google Analytics tracking code here
-// });
+function initScrollVideo() {
+    const video = document.getElementById('about-model-video');
+    if (!video) return;
 
-/**
- * Optional: Service Worker Registration (for PWA)
- */
-// if ('serviceWorker' in navigator) {
-//     window.addEventListener('load', () => {
-//         navigator.serviceWorker.register('/sw.js')
-//             .then(registration => {
-//                 console.log('SW registered:', registration);
-//             })
-//             .catch(error => {
-//                 console.log('SW registration failed:', error);
-//             });
-//     });
-// }
+    let isScrolling;
+    let lastScrollTop = 0;
+
+    window.addEventListener('scroll', () => {
+        // 1. Play/Stop Logic
+        window.clearTimeout(isScrolling);
+        
+        if (video.paused) {
+            video.play().catch(e => console.log("Video play interrupted:", e));
+        }
+
+        isScrolling = setTimeout(() => {
+            video.pause();
+        }, 150);
+
+        // 3D Rotation Logic removed to keep the frame static
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+    }, { passive: true });
+}
