@@ -439,18 +439,14 @@
 }
 
 /* ── Blog / Case Studies Section ─────────── */
-.blog {
-    padding: var(--section-padding) 0;
-    background: var(--bg-secondary);
-    position: relative;
-    z-index: 1;
+.blog-card-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
 }
 
-.blog-grid {
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr;
-    gap: 28px;
-    align-items: start;
+.blog-card-link:hover {
+    text-decoration: none;
 }
 
 .blog-card {
@@ -460,6 +456,9 @@
     box-shadow: 0 8px 30px var(--shadow-color);
     border: 1px solid var(--border-color);
     transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-card:hover {
@@ -477,6 +476,17 @@
     aspect-ratio: 16/8;
 }
 
+.blog-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.blog-card:hover .blog-card-image img {
+    transform: scale(1.05);
+}
+
 .blog-image-placeholder {
     width: 100%;
     height: 100%;
@@ -485,11 +495,6 @@
     justify-content: center;
     font-size: 3rem;
     color: rgba(255, 255, 255, 0.6);
-    transition: transform 0.4s ease;
-}
-
-.blog-card:hover .blog-image-placeholder {
-    transform: scale(1.05);
 }
 
 .blog-tag {
@@ -504,10 +509,14 @@
     letter-spacing: 1px;
     padding: 4px 12px;
     border-radius: 50px;
+    z-index: 1;
 }
 
 .blog-card-content {
     padding: 24px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 .blog-meta {
@@ -524,19 +533,24 @@
 }
 
 .blog-title {
-    font-size: 1.05rem;
+    font-size: 1.15rem;
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: 10px;
     line-height: 1.4;
+    transition: color 0.3s ease;
+}
+
+.blog-card:hover .blog-title {
+    color: var(--accent-primary);
 }
 
 .blog-card-featured .blog-title {
-    font-size: 1.25rem;
+    font-size: 1.4rem;
 }
 
 .blog-excerpt {
-    font-size: 0.88rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
     line-height: 1.65;
     margin-bottom: 18px;
@@ -544,6 +558,7 @@
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    flex: 1;
 }
 
 .blog-read-more {
@@ -554,10 +569,16 @@
     font-size: 0.875rem;
     font-weight: 600;
     transition: gap 0.2s ease;
+    margin-top: auto;
 }
 
 .blog-read-more:hover {
     gap: 10px;
+}
+
+.blog-cta {
+    text-align: center;
+    margin-top: 50px;
 }
 
 /* ── Responsive fixes ─────────────────────── */
