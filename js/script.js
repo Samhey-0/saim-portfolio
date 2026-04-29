@@ -240,7 +240,7 @@ function initTypingEffect() {
  */
 function initScrollAnimations() {
     const animatedElements = document.querySelectorAll(
-        '.project-card, .skill-item, .stat-item, .contact-item, .section-header, .tech-card, .about-info, .about-image'
+        '.project-card, .blog-card, .skill-item, .stat-item, .contact-item, .section-header, .tech-card, .about-info, .about-image'
     );
 
     // Add initial class with smart directions based on element type
@@ -256,11 +256,20 @@ function initScrollAnimations() {
         }
 
         // Setup staggered delays for grids
-        const parent = el.parentElement;
-        if (parent && (parent.classList.contains('skills-grid') || parent.classList.contains('tech-grid') || parent.classList.contains('projects-grid') || parent.classList.contains('stats-grid'))) {
-            // Find index of element relative to siblings
-            const siblings = Array.from(parent.children);
-            const indexInParent = siblings.indexOf(el);
+        const gridParent = el.closest('.skills-grid, .tech-grid, .projects-grid, .blog-grid, .stats-grid');
+        if (gridParent) {
+            // Find index of element relative to its container
+            let indexInParent;
+            
+            // If the element is wrapped in an anchor tag (like project-card or blog-card)
+            if (el.parentElement.tagName === 'A') {
+                const siblings = Array.from(gridParent.children);
+                indexInParent = siblings.indexOf(el.parentElement);
+            } else {
+                const siblings = Array.from(gridParent.children);
+                indexInParent = siblings.indexOf(el);
+            }
+            
             // Convert to ms delay (e.g. 100ms per index)
             el.style.transitionDelay = `${indexInParent * 100}ms`;
         }

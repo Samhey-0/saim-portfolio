@@ -745,6 +745,128 @@ input, textarea {
 /* ========================================
    Projects Section — THE KEY FIX
 ======================================== */
+.blog {
+    padding: var(--section-padding) 0;
+    background: var(--bg-secondary);
+    position: relative;
+    z-index: 1;
+}
+
+.blog-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    position: relative;
+    z-index: 2;
+}
+
+.blog-card {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px var(--shadow-color);
+    transition: all var(--transition-normal);
+    position: relative;
+    z-index: 2;
+    background: var(--bg-secondary);
+}
+
+.blog-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 60px var(--shadow-hover);
+}
+
+.blog-image {
+    position: relative;
+    aspect-ratio: 16/10;
+    overflow: hidden;
+}
+
+.blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.blog-card:hover .blog-image img { 
+    transform: scale(1.1); 
+}
+
+.blog-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(15, 52, 96, 0.95);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    text-align: center;
+    opacity: 0;
+    transition: all var(--transition-normal);
+    z-index: 3;
+}
+
+.blog-card:hover .blog-overlay { 
+    opacity: 1; 
+}
+
+.blog-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    backdrop-filter: blur(10px);
+}
+
+.blog-overlay h3 {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    max-width: 90%;
+    line-height: 1.2;
+}
+
+.blog-overlay p {
+    color: rgba(255,255,255,0.9);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    max-width: 90%;
+}
+
+.blog-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    background: rgba(255,255,255,0.15);
+    border: 1px solid rgba(255,255,255,0.3);
+    border-radius: 25px;
+    backdrop-filter: blur(10px);
+    transition: all var(--transition-fast);
+}
+
+.blog-link:hover {
+    background: rgba(255,255,255,0.25);
+    transform: translateY(-1px);
+}
+
+.blog-cta {
+    text-align: center;
+    margin-top: 50px;
+}
+
 .projects {
     padding: var(--section-padding) 0;
     background: var(--bg-primary);
@@ -1313,6 +1435,7 @@ input, textarea {
     }
 
     .projects-grid { grid-template-columns: repeat(2, 1fr); }
+    .blog-grid { grid-template-columns: repeat(2, 1fr); }
 
     .contact-content { grid-template-columns: 1fr; }
 
@@ -1356,6 +1479,7 @@ input, textarea {
     .stat-number { font-size: 2rem; }
 
     .projects-grid { grid-template-columns: 1fr; }
+    .blog-grid { grid-template-columns: 1fr; }
 
     .contact-form { padding: 30px 24px; }
 
